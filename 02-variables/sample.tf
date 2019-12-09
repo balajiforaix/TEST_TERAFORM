@@ -18,7 +18,7 @@ variable "simple-boolean" {
 }
 
 variable "simple-list" {
-  type = "list"
+  type = list
   default = [1, 2]
 }
 
