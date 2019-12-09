@@ -19,11 +19,15 @@ variable "simple-boolean" {
 
 variable "simple-list" {
   type = list
-  default = [1, 2]
+  default = [111, "abc"]
 }
 
 resource "null_resource" "sample" {
   provisioner "local-exec" {
     command = "echo -e \" String = ${var.simple-string}\n Number = ${var.simple-number}\n Boolean = ${var.simple-boolean} \""
+  }
+
+  provisioner "local-exec" {
+    command = "echo -e Value1 = ${var.simple-list[0]}"
   }
 }
