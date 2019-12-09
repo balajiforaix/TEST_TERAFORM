@@ -1,6 +1,7 @@
 // Declare a string
 
 variable "simple-string" {
+  type = "string" // No need of this if you give the value in double quot
   default = "SIMPLE"
 }
 
