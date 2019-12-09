@@ -17,3 +17,8 @@ variable "simple-boolean" {
   default = true
 }
 
+resource "null_resource" "sample" {
+  provisioner "local-exec" {
+    command = "echo -e \" String = ${var.simple-string}\n Number = ${var.simple-number}\n Boolean = ${var.simple-boolean} \""
+  }
+}
