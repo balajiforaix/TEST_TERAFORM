@@ -22,6 +22,14 @@ variable "simple-list" {
   default = [111, "abc"]
 }
 
+variable "simple-map" {
+  type = map
+  default = {
+    trainer_name = "Raghu"
+    training_name = "DevOps"
+  }
+}
+
 
 
 resource "null_resource" "sample" {
@@ -30,6 +38,6 @@ resource "null_resource" "sample" {
   }
 
   provisioner "local-exec" {
-    command = "echo -e Value1 = ${var.simple-list[0]}"
+    command = "echo -e Value1 = ${var.simple-list[0]}, Trainer Name = ${var.simple-map["trainer_name"]}"
   }
 }
