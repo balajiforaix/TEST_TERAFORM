@@ -1,8 +1,8 @@
 variable "ami_id" {
-  default =  ""
+  default =  "ami-02c419e998e13412a"
 }
 
 resource "aws_instance" "web" {
-  ami           = ""
+  ami           = var.ami_id
   instance_type = "t2.micro"
 }
