@@ -18,7 +18,9 @@ resource "aws_instance" "web" {
       password = "DevOps321"
     }
     inline = [
-      "yum install nginx -y"
+      "cd /tmp",
+      "git clone https://gitlab.com/devopsb43/shell-scripts.git",
+      "cd shell-scripts/"
     ]
   }
 }
