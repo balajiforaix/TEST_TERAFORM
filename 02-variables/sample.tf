@@ -30,7 +30,7 @@ variable "simple-map" {
   }
 }
 
-variable "cli-var" {}
+variable "cli-var1" {}
 
 
 resource "null_resource" "sample" {
