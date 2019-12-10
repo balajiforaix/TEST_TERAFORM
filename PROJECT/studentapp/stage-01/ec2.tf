@@ -1,4 +1,8 @@
+variable "ami_id" {
+  default =  ""
+}
+
 resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.ubuntu.id}"
+  ami           = ""
   instance_type = "t2.micro"
 }
