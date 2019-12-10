@@ -13,7 +13,8 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     connection {
-      
+      user = "root"
+      password = "DevOps321"
     }
     inline = [
       "yum install nginx -y"
