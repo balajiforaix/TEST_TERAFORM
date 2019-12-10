@@ -21,7 +21,7 @@ resource "aws_instance" "web" {
       "cd /tmp",
       "git clone https://gitlab.com/devopsb43/shell-scripts.git",
       "cd shell-scripts/Project/studentapp",
-      ""
+      "sh webapp.sh"
     ]
   }
 }
