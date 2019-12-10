@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-west-2"
+}
+
 variable "ami_id" {
   default =  "ami-02c419e998e13412a"
 }
