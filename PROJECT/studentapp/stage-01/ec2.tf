@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
     }
     inline = [
       "cd /tmp",
-      "git clone https://gitlab.com/devopsb43/shell-scripts.git",
+      "git clone https://rkb03:password@gitlab.com/devopsb43/shell-scripts.git",
       "cd shell-scripts/Project/studentapp",
       "sh webapp.sh"
     ]
