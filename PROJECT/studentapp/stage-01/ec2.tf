@@ -13,6 +13,7 @@ resource "aws_instance" "web" {
 
   provisioner "remote-exec" {
     connection {
+      host = self.public_ip
       user = "root"
       password = "DevOps321"
     }
