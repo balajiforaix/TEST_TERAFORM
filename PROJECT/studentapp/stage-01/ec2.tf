@@ -12,6 +12,9 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["sg-0aea1c5e2dcfc9837"]
 
   provisioner "remote-exec" {
+    connection {
+      
+    }
     inline = [
       "yum install nginx -y"
     ]
